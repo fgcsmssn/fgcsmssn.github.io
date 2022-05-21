@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mateslist</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@300&family=Playfair+Display:ital,wght@1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Center website */
+      .main {
+        max-width: 1000px;
+        margin: auto;
+      }
+      h1 {
+        font-family: "Playfair Display", serif;
+      }
+
+      h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 50px;
+        word-break: break-all;
+      }
+
+      .row {
+        margin: 10px -16px;
+      }
+
+      /* Add padding BETWEEN each column */
+      .row,
+      .row > .column {
+        padding: 8px;
+      }
+
+      /* Create three equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 33.33%;
+        display: none; /* Hide all elements by default */
+      }
+
+      /* Clear floats after rows */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Content */
+      .content {
+        background-color: white;
+        padding: 10px;
+      }
+
+      /* The "show" class is added to the filtered elements */
+      .show {
+        display: block;
+      }
+
+      /* Style the buttons */
+      .btn {
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: white;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #ddd;
+      }
+
+      .btn.active {
+        background-color: #666;
+        color: white;
+      }
+      .card-deco {
+        border-radius: 25px;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 0.9rem;
+        letter-spacing: 0.1rem;
+        background-color: rgb(100, 124, 100);
+      }
+      .card-deco:hover {
+        transform: scale(1.1);
+        transition: 0.4s ease;
+      }
+
+      .thead{
+          font-size: 17px;
+          letter-spacing: .1rem;
+          font-weight: 200;
+      }
+      tbody {
+           font-weight: 500;
+     font-size: 1rem;
+     letter-spacing: .1rem;
+     color: rgb(59, 53, 53);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1 style="color: rgb(112, 161, 112)"><i>FGCSN 2010</i></h1>
+      <p style="font-size: 1rem; letter-spacing: 0.2rem">
+        Home of Shea Butter.
+      </p>
+    </div>
+
+    <nav
+      class="navbar navbar-expand-md navbar-dark shadow-lg sticky-top"
+      id="navbar1"
+    >
+      <a class="navbar-brand" href="./index.html">Home</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#collapsibleNavbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav mx-auto">
+          <div class="dropdown mx-auto">
+            <li class="dropbtn" onclick="myFunction()">
+              Pay
+              <i class="fa fa-caret-down"></i>
+
+              <div class="dropdown-content" id="myDropdown">
+                <a href="#">Monthly Contribution</a>
+                <a href="#">Donation</a>
+                <a href="#">Link 3</a>
+              </div>
+            </li>
+          </div>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Class Mates</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./gallery.html">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <hr>
+     <div class="container mt-4">
+
+      <div class="main">
+
+        <h2>MATES</h2>
+
+        <div id="myBtnContainer">
+         
+          <a href="./mates.html" style="text-decoration: none;" class="btn ">
+            Grid View
+            </a>
+         
+          <button class="btn active" onclick="filterSelection('cars')">
+            List View
+          </button>
+         
+        </div>
+       
+  <div class="table-responsive mt-4">
+    <table class="table table-bordered ">
+      <thead class="thead" style="background-color: rgb(157, 197, 157);">
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>House</th>
+          <th>Class</th>
+           <th>Number</th>
+            <th>Address</th>
+         
+          
+         
+        
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Abdulkadir Yusuf Nawawi</td>
+          <td>Niger</td>
+          <td>G</td>
+           <td>08032608348</td>
+            <td>No.9 Abuja Road Sokoto</td>
+          
+        </tr>
+         <tr>
+          <td>2</td>
+          <td>Anas Hassan</td>
+          <td>Benue</td>
+           <td>G</td>
+          <td>08064146154</td>
+          <td>Lowcost Area Sokoto</td>
+          
+        </tr>
+
+         <tr>
+          <td>3</td>
+          <td>Abbakar Sadiq Nuhu</td>
+          <td>Benue</td>
+          <td>G</td>
+          <td>08063876552</td>
+          <td>Arkilla lowcost</td>
+          
+          
+        </tr>
+         <tr>
+          <td>4</td>
+           <td>Bilya Jabo</td>
+          <td>Benue</td>
+          <td>U</td>
+          <td>07032373663</td>
+          <td>Mana Area</td>
+          
+        </tr>
+         <tr>
+        <td>5</td>
+           <td>Muazu Aliyu</td>
+          <td>Benue</td>
+          <td>F</td>
+          <td>08039469097</td>
+          <td>Gusau</td>
+          
+        </tr>
+         <tr>
+          <td>6</td>
+           <td>Tauheed Mahe</td>
+          <td>Niger</td>
+          <td>S</td>
+          <td>08060088813</td>
+          <td>Wamakko</td>
+          
+          
+        </tr>
+         <tr>
+         <td>7</td>
+           <td>Kasimu Hussani</td>
+          <td>Oshun</td>
+          <td>S</td>
+          <td>08061638472</td>
+          <td>Bado Area</td>
+          
+          
+        </tr>
+         <tr>
+         <td>8</td>
+           <td>Bello Iya</td>
+          <td>Niger</td>
+          <td>G</td>
+          <td>08144054422</td>
+          <td>Mabera Area</td>
+          
+          
+        </tr>
+         <tr>
+          <td>9</td>
+           <td>Abdulrahman Bello</td>
+          <td>Niger</td>
+          <td>C</td>
+          <td>08132325951</td>
+          <td>Gada biyu Area</td>
+          
+          
+        </tr>
+         <tr>
+          <td>10</td>
+           <td>Yahya Aliyu</td>
+          <td>Niger</td>
+          <td>G</td>
+          <td>07033814171</td>
+          <td>Arkilla Area</td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+        </div>
+        </div>
+    <script>
+      /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (e) {
+        if (!e.target.matches(".dropbtn")) {
+          var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains("show")) {
+            myDropdown.classList.remove("show");
+          }
+        }
+      };
+    </script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script> 
+  </body>
+</html>

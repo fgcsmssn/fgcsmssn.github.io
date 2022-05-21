@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matesgrid</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@300&family=Playfair+Display:ital,wght@1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+        /* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+      h1 {
+        font-family: "Playfair Display", serif;
+      }
+
+      h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 50px;
+        word-break: break-all;
+      }
+
+      .row {
+        margin: 10px -16px;
+      }
+
+      /* Add padding BETWEEN each column */
+      .row,
+      .row > .column {
+        padding: 8px;
+      }
+
+      /* Create three equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 33.33%;
+        display: none; /* Hide all elements by default */
+      }
+
+      /* Clear floats after rows */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Content */
+      .content {
+        background-color: white;
+        padding: 10px;
+      }
+
+      /* The "show" class is added to the filtered elements */
+      .show {
+        display: block;
+      }
+
+      /* Style the buttons */
+      .btn {
+        border: none;
+        text-decoration: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: white;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #ddd;
+      }
+
+      .btn.active {
+        background-color: #666;
+        color: white;
+      }
+      .card-deco {
+          border-radius: 25px;
+            text-transform: uppercase;
+     font-weight: 500;
+     font-size: .9rem;
+     letter-spacing: .1rem;
+     background-color: rgb(100, 124, 100);
+        
+      }
+      .card-deco:hover {
+           transform:scale(1.1);
+      transition: .4s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1 style="color: rgb(112, 161, 112)"><i>FGCSN 2010</i></h1>
+      <p style="font-size: 1rem; letter-spacing: 0.2rem">
+        Pro Unitate.
+      </p>
+    </div>
+
+    <nav
+      class="navbar navbar-expand-md navbar-dark shadow-lg sticky-top"
+      id="navbar1"
+    >
+      <a class="navbar-brand" href="./index.html">Home</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#collapsibleNavbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav mx-auto">
+          <div class="dropdown mx-auto">
+            <li class="dropbtn" onclick="myFunction()">
+              Pay
+              <i class="fa fa-caret-down"></i>
+
+              <div class="dropdown-content" id="myDropdown">
+                <a href="#">Monthly Contribution</a>
+                <a href="#">Donation</a>
+                <a href="#">Link 3</a>
+              </div>
+            </li>
+          </div>
+          <li class="nav-item">
+            <a class="nav-link" href="./gallery.html" >Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./mates.html" style="border-bottom: 2px solid red;">Class Mates</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <hr />
+    <div class="container mt-4">
+
+      <div class="main">
+
+        <h2>MATES</h2>
+
+        <div id="myBtnContainer">
+         
+          <button class="btn active" onclick="filterSelection('nature')">
+            Grid View
+          </button>
+          <a href="./mateslist.html" style="text-decoration: none;" class="btn ">
+            List View
+            </a>
+         
+         
+        </div>
+    
+
+    <!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column nature ">
+    <div class="content card-deco">
+      <img src="wedding2.PNG" alt="Mountains" style="width:100%; height: 250px; object-fit: cover; border-radius: 35px;" class="img-fluid shadow">
+      <h6 class="mt-2" style="color:rgb(211, 206, 206)">Abdulkadir Nawawi</h6>
+      <p>House: Niger</p>
+       <p>Class:G</p>
+        <p>Number:08032608348</p>
+    </div>
+  </div>
+ 
+  <div class="column nature">
+    <div class="content card-deco">
+      <img src="wedding23.PNG" alt="Mountains" style="width:100%; height: 250px; object-fit: cover; border-radius: 35px;" class="img-fluid shadow">
+      <h6 class="mt-2" style="color:rgb(211, 206, 206)">Bilya Jabo</h6>
+      <p>House: Benue</p>
+       <p>Class:Z</p>
+        <p>Number:07032373663</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content card-deco">
+      <img src="wedding18.JPG" alt="Mountains" style="width:100%; height: 250px; object-fit: cover; border-radius: 35px;" class="img-fluid shadow">
+      <h6 class="mt-2" style="color:rgb(211, 206, 206)">Abbakar sadiq</h6>
+      <p>House: Benue</p>
+       <p>Class:G</p>
+        <p>Number:08063876552</p>
+    </div>
+  </div>
+  
+  <div class="column nature">
+    <div class="content card-deco">
+      <img src="wedding16.PNG" alt="Mountains" style="width:100%; height: 250px; object-fit: cover; border-radius: 35px;" class="img-fluid shadow">
+      <h6 class="mt-2" style="color:rgb(211, 206, 206)">Nuraddeen Liba</h6>
+      <p>House: Oshun</p>
+       <p>Class:F</p>
+        <p>Number:08033891735</p>
+    </div>
+  </div>
+
+   <div class="column nature">
+    <div class="content card-deco">
+      <img src="IMG_5743.JPG" alt="Mountains" style="width:100%; height: 250px; object-fit: cover; border-radius: 35px;" class="img-fluid shadow">
+      <h6 class="mt-2" style="color:rgb(211, 206, 206)">Kabiru Muhammad </h6>
+      <p>House: Oshun</p>
+       <p>Class:S</p>
+        <p>Number:08133805759</p>
+    </div>
+  </div>
+
+   <div class="column nature">
+  <div class="content card-deco">
+      <img src="tjerry.jpg" alt="Mountains" style="width:100%; height: 250px; object-fit: cover; border-radius: 35px;" class="img-fluid shadow">
+      <h6 class="mt-2" style="color:rgb(211, 206, 206)">Anas Hassan </h6>
+      <p>House: Benue</p>
+       <p>Class:G</p>
+        <p>Number:08064146154</p>
+    </div>
+  </div>
+
+   <div class="column nature">
+    <div class="content card-deco">
+      <img src="kasimu.JPG" alt="Mountains" style="width:100%; height: 250px; object-fit: cover; border-radius: 35px;" class="img-fluid shadow">
+      <h6 class="mt-2" style="color:rgb(211, 206, 206)">Kasimu Hussani</h6>
+      <p>House: Oshun</p>
+       <p>Class:S</p>
+        <p>Number:08061638472</p>
+    </div>
+  </div>
+
+   <div class="column nature">
+   <div class="content card-deco">
+      <img src="salmanu2.PNG" alt="Mountains" style="width:100%; height: 250px; object-fit: cover; border-radius: 35px;" class="img-fluid shadow">
+      <h6 class="mt-2" style="color:rgb(211, 206, 206)">Salmanu Hamza </h6>
+      <p>House: Rima</p>
+       <p>Class:S</p>
+        <p>Number:08034655596</p>
+    </div>
+  </div>
+
+ <div class="column nature">
+    <div class="content card-deco">
+      <img src="by.JPG" alt="Mountains" style="width:100%; height: 250px; object-fit: cover; border-radius: 35px;" class="img-fluid shadow">
+      <h6 class="mt-2" style="color:rgb(211, 206, 206)">Shamsu B/Y</h6>
+      <p>House: Oshun</p>
+       <p>Class:S</p>
+        <p>Number:07068142623</p>
+    </div>
+  </div>
+
+  
+
+   
+
+  
+
+  
+
+  
+
+   
+
+
+  
+
+
+  
+
+
+  </div>
+
+<!-- END MAIN -->
+</div>
+
+
+
+    
+    <script>
+      /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (e) {
+        if (!e.target.matches(".dropbtn")) {
+          var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains("show")) {
+            myDropdown.classList.remove("show");
+          }
+        }
+      };
+
+
+
+
+      filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+    </script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script> 
+  </body>
+</html>
